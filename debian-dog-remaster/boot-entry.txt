@@ -1,0 +1,4 @@
+label DebianDog Wheezy live-boot-3x (sda1) 
+root=(hd0,0) 
+kernel /live/vmlinuz1 boot=live config persistence swapon rw-basemount quickreboot noeject autologin 
+initrd /live/initrd.img
