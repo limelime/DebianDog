@@ -30,6 +30,7 @@ Specific changes
 * Add proxy information in **Firefox**.
 * Add proxy information in `/etc/apt/apt.conf`.
 * Add proxy information in `/etc/environment`.
+* [Add VirtualBox Guest Additions](http://openwritings.net/content/public/excerpt/mount-virtualbox-share-folder)(380MB).
 
 
 
