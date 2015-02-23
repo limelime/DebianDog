@@ -1,0 +1,39 @@
+# Added customs properties in SciTEGlobal.properties file (/usr/share/scite/SciTEGlobal.properties)
+# LinuxMint: /etc/scite/SciTEGlobal.properties
+# -----------------------------
+ 
+# Turn every characters to monospace.
+font.base=$(font.monospace)
+font.small=$(font.monospace)
+font.comment=$(font.monospace)
+font.text=$(font.monospace)
+font.text.comment=$(font.monospace)
+font.embedded.base=$(font.monospace)
+font.embedded.comment=$(font.monospace)
+font.vbs=$(font.monospace)
+ 
+# Line numbering
+line.margin.visible=1
+line.margin.width=1+
+ 
+# Foldable for block of code?(e.g. loops, functions, etc)
+fold=1
+ 
+# Indentation
+tabsize=2
+indent.size=2
+use.tabs=0
+ 
+# Status bar
+statusbar.visible=1
+ 
+# Highlight background color
+highlight.current.word=1
+highlight.current.word.colour=#316AC5
+ 
+# Find/Search highlight background color
+selection.back=#FF0000
+ 
+# File Encoding
+code.page=65001
+output.code.page=65001
