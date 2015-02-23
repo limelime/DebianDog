@@ -1,0 +1,61 @@
+# FROM /root/.bashrc
+
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+# Note: PS1 and umask are already set in /etc/profile. You should not
+# need this unless you want different defaults for root.
+# PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
+# umask 022
+
+# You may uncomment the following lines if you want `ls' to be colorized:
+# export LS_OPTIONS='--color=auto'
+# eval "`dircolors`"
+# alias ls='ls $LS_OPTIONS'
+# alias ll='ls $LS_OPTIONS -l'
+# alias l='ls $LS_OPTIONS -lA'
+#
+# Some more alias to avoid making mistakes:
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+
+# Some shortcuts for different directory listings
+alias ls='ls -hFA --color=tty'                 # classify files in colour
+alias dir='ls -A --color=auto --format=vertical'
+alias vdir='ls -A --color=auto --format=long'
+alias ll='ls -lA'                              # long list
+alias la='ls -A'                              # all but . and ..
+alias l='ls -CFA'                              #
+ 
+alias grep='grep --color'                     # show differences in colour
+ 
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+alias du1='du --max-depth=1'
+ 
+# Some more alias to avoid making mistakes:
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias df='df -h'
+alias du='du -ch'
+alias du1='du --max-depth=1'
+alias m='mpv --volume=30 --autofit=80%'
+alias mu='mpv --volume=30 --autofit=80% --no-video'
+alias mf='mpv -fs --volume=30'
+alias g='geeqie ./&'
+alias halt='halt -p'
+
+# Define what to display on the command line.
+red='\e[0;31m'
+brown='\e[0;33m'
+no_color='\e[0m'
+export PS1="${brown}--=[\$(date +%Y-%m-%d) \t @${no_color}${red}\u${no_color}${brown}]=--${no_color}\n\w>"
+
+export HISTTIMEFORMAT="%s "
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER \
+               "$(history 1)" >> ~/.bash_eternal_history'
+
+# Environment variables
