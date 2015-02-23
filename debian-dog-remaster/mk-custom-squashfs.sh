@@ -38,6 +38,10 @@ cp -R ${MOUNT_SQUASH}/* ${NEW_SQUASH_DIR}
 ### Copy post-boot directory to /root.
 cp -R post-boot ${NEW_SQUASH_DIR}/root/
 
+### Make squashfs
+rm -f ${OUTPUT_SQUASH_FILE}
+mksquashfs ${NEW_SQUASH_DIR} ${OUTPUT_SQUASH_FILE}
+
 
 ### Clean up
 lsof | grep iso

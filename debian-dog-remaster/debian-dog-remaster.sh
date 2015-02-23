@@ -11,7 +11,7 @@
 ### Extract ISO.
 EXTRACTED_ISO_DIR=/media/sf_vm_sharedfolder/moddebdogdir
 ISO_FILE_PATH=/media/sf_vm_sharedfolder/DebianDog-Wheezy-openbox_xfce.iso
-./extract-deb-iso.sh ${ISO_FILE_PATH} ${EXTRACTED_ISO_DIR}
+#./extract-deb-iso.sh ${ISO_FILE_PATH} ${EXTRACTED_ISO_DIR}
 
 # Replace squashfs
 SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs

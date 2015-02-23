@@ -2,7 +2,7 @@ INSTALL_DATA_DIR=/root/post-boot/install-data
 SCRIPT_NAME="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 
 # Remove current default text editor
-apt-get remove leafpad
+apt-get -y remove leafpad
 
 # Install Scite
 apt-get -y intsall scite
