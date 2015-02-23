@@ -31,11 +31,6 @@ for scriptfile in $( ls install-??-*.sh ); do
     echo "Running ${scriptfile}..."
     sh ${scriptfile}
 done
-sh install-proxy.sh
 
-
-  
-sh install-scite.sh
-sh install-chinese-fonts.sh
 
 
