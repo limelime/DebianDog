@@ -17,3 +17,4 @@ apt-get -y install localepurge
 # References:
 # -https://people.debian.org/~schultmc/locales.html
 # -http://perlgeek.de/en/article/set-up-a-clean-utf8-environment
+# /etc/default/locale

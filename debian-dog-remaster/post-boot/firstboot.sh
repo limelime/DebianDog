@@ -27,7 +27,7 @@ cp -Rf ${POST_BOOT_DIR}/apt-i386/archives/* ${DEB_CACHE_DIR}
 
 ### Install
 # Make sure script files are listed in alphabetical order.
-for scriptfile in $( ls install-??-*.sh ); do
+for scriptfile in $( ls install-*.sh ); do
     echo "Running ${scriptfile}..."
     sh ${scriptfile}
 done
