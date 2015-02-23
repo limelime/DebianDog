@@ -5,7 +5,7 @@ SCRIPT_NAME="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 apt-get -y remove leafpad
 
 # Install Scite
-apt-get -y intsall scite
+apt-get -y install scite
 
 # Modify Scite configurations
 SCITE_CONFIG_FILE=/etc/scite/SciTEGlobal.properties
