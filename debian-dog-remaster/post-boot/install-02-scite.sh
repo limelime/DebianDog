@@ -14,7 +14,7 @@ if [ ! -f ${SCITE_CONFIG_FILE}.bck ]; then
 	cat ${INSTALL_DATA_DIR}/scite-config.txt >> ${SCITE_CONFIG_FILE}
 	
 	# Debug: sed "s/open.filter=\\\/open.filter=\\\xuan\\n\$(all.files)\\\xuan\\nxuan/" /etc/scite/SciTEGlobal.properties | grep xuan
-  sed -i "s/open.filter=\\\/open.filter=\\\\\n\$(all.files)\\\\\n/" /etc/scite/SciTEGlobal.properties
+  sed -i "s/open.filter=\\\/open.filter=\\\\\n\$(all.files)\\\/" /etc/scite/SciTEGlobal.properties
 
 else
   echo "Error: ${SCRIPT_NAME} failed!"
