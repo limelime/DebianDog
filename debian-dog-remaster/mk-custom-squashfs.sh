@@ -44,10 +44,12 @@ mksquashfs ${NEW_SQUASH_DIR} ${OUTPUT_SQUASH_FILE}
 
 
 ### Clean up
-lsof | grep iso
 umount ${MOUNT_DEBIAN_DOG_ISO}
 umount ${MOUNT_SQUASH}
 umount ${MOUNT_DEBIAN_DOG_ISO}
 umount ${MOUNT_SQUASH}
 #rm -rf ${MOUNT_DEBIAN_DOG_ISO}
 #rm -rf ${MOUNT_SQUASH}
+
+### Debug
+# lsof | grep iso
