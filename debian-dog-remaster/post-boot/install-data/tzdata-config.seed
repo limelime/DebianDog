@@ -1,0 +1,14 @@
+tzdata	tzdata/Zones/Australia	select	
+tzdata	tzdata/Zones/US	select	
+tzdata	tzdata/Zones/Asia	select	
+tzdata	tzdata/Zones/Etc	select	UTC
+tzdata	tzdata/Zones/SystemV	select	
+tzdata	tzdata/Zones/Africa	select	
+tzdata	tzdata/Zones/America	select	Montreal
+tzdata	tzdata/Zones/Arctic	select	
+tzdata	tzdata/Zones/Pacific	select	
+tzdata	tzdata/Areas	select	America
+tzdata	tzdata/Zones/Antarctica	select	
+tzdata	tzdata/Zones/Atlantic	select	
+tzdata	tzdata/Zones/Europe	select	
+tzdata	tzdata/Zones/Indian	select	
