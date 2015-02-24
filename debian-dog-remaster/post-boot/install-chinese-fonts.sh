@@ -14,8 +14,8 @@ apt-get -y install fonts-arphic-ukai fonts-arphic-uming
 
 # Install localepurge to keep locale small
 apt-get -y install localepurge
-echo "localepurge localepurge/nopurge multiselect en, en_US.UTF-8, zh, zh_TW, zh_TW.UTF-8"|debconf-set-selections
-dpkg-reconfigure localepurge
+echo "localepurge localepurge/nopurge multiselect en, en_US.UTF-8" | debconf-set-selections
+DEBCONF_DEBUG=developer DEBIAN_FRONTEND=noninteractive dpkg-reconfigure localepurge
 
 # References:
 # -https://people.debian.org/~schultmc/locales.html
