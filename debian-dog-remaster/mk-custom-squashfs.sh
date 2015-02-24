@@ -36,7 +36,9 @@ mkdir -p ${NEW_SQUASH_DIR}
 cp -R ${MOUNT_SQUASH}/* ${NEW_SQUASH_DIR}
 
 ### Copy post-boot directory to /root.
+chmod +x post-boot/install*.sh
 cp -R post-boot ${NEW_SQUASH_DIR}/root/
+
 
 ### Make squashfs
 rm -f ${OUTPUT_SQUASH_FILE}
