@@ -6,3 +6,4 @@ sh install-00-bashrc.sh
 sh install-00-proxy.sh
 sh install-00-apt-get-update.sh
 sh install-00-locale.sh
+
