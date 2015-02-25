@@ -14,4 +14,4 @@ sed -i "s/\(^deb.*deb-multimedia.*\)/#\1/" ${SOURCE_LIST}
 apt-get update
 
 ### Test
-# ls /var/cache/apt/archives/
+# ls /var/cache/apt/archives/ | grep "\.deb"
