@@ -15,6 +15,11 @@ echo "en_US.UTF-8 UTF-8" >> ${LOCALE_GEN}
 
 # So that `cat /etc/default/locale` gives LANG=en_US.UTF-8. 
 update-locale LANG=en_US.UTF-8
+
+# Add locale environment variables
+cat ${INSTALL_DATA_DIR}/locale-env-vars.txt >> /root/.bashrc
+source /root/.bashrc
+
 ### Gave up on these:
 # debconf-set-selections ${INSTALL_DATA_DIR}/locale-config.seed
 # dpkg-reconfigure locales
