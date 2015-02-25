@@ -18,7 +18,9 @@ echo "${SCRIPT_NAME} ran on ${DATE_STRING}" >> ${FIRST_BOOT_LOCK};
 
 ### Install
 # Make sure script files are listed in alphabetical order.
-for scriptfile in $( ls install-*.sh ); do
+
+# Execute script with install-<letter>*.sh
+for scriptfile in $( ls install-[aA-zZ]*.sh ); do
     echo "Running ${scriptfile}..."
     sh ${scriptfile}
 done
