@@ -59,8 +59,4 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER \
                "$(history 1)" >> ~/.bash_eternal_history'
 
 ### Environment variables
-# Make output of `locale` to be en_US.UTF-8. 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-# http://perlgeek.de/en/article/set-up-a-clean-utf8-environment
+
