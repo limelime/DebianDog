@@ -9,7 +9,8 @@ apt-get -y install dkms build-essential linux-headers-$(uname -r)
 
 # Mount VBoxGuestAdditions.iso
 VBOX_GUEST_ISO_DIR=./tmp-vbox-guest-addtions
-mount -o loop VBoxGuestAdditions.iso ${VBOX_GUEST_ISO_DIR}
+mkdir ${VBOX_GUEST_ISO_DIR}
+mount -o loop ${INSTALL_DATA_DIR}/VBoxGuestAdditions.iso ${VBOX_GUEST_ISO_DIR}
 
 # Execute VBoxLinuxAdditions.run
 cd ${VBOX_GUEST_ISO_DIR}
