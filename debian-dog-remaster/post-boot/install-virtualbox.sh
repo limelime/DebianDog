@@ -26,7 +26,7 @@ rm -rf ${VBOX_GUEST_ISO_DIR}
 VBOX_MNT_POINT=/vbox/shared
 FSTAB=/etc/fstab
 cp -n ${FSTAB} ${FSTAB}.bck
-mkdir ${VBOX_MNT_POINT}
+mkdir -p ${VBOX_MNT_POINT}
 echo "shared ${VBOX_MNT_POINT} vboxsf defaults 0 0" >> ${FSTAB}
 mount -a
 
