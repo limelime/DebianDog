@@ -22,7 +22,8 @@ umount ${VBOX_GUEST_ISO_DIR}
 rm -rf ${VBOX_GUEST_ISO_DIR}
 
 # Add mount point
-VBOX_MNT_POINT=/mnt/vbox-shared
+# Be careful of the VBOX_MNT_POINT path because /mnt & /media are exclude from RemasterDog script.
+VBOX_MNT_POINT=/vbox/shared
 FSTAB=/etc/fstab
 cp -n ${FSTAB} ${FSTAB}.bck
 mkdir ${VBOX_MNT_POINT}
