@@ -1,11 +1,10 @@
 # Description: This script should be executed on the first boot.
 # Author: Xuan Ngo
 
-POST_BOOT_DIR=/root/post-boot
 SCRIPT_NAME="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 
 ### Error handling.
-FIRST_BOOT_LOCK=${POST_BOOT_DIR}/firstboot.lock
+FIRST_BOOT_LOCK=firstboot.lock
 if [ -f ${FIRST_BOOT_LOCK} ]; then
 
   echo "Error: ${SCRIPT_NAME} failed!"
