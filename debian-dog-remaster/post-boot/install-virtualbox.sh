@@ -20,3 +20,11 @@ cd ..
 # Clean up.
 umount ${VBOX_GUEST_ISO_DIR}
 rm -rf ${VBOX_GUEST_ISO_DIR}
+
+# Add mount point
+VBOX_MNT_POINT=/mnt/vbox-shared
+FSTAB=/etc/fstab
+cp -n ${FSTAB} ${FSTAB}.bck
+mkdir ${VBOX_MNT_POINT}
+echo "shared ${VBOX_MNT_POINT} vboxsf defaults" >> ${FSTAB}
+# options: (rw,nodev,relatime)
