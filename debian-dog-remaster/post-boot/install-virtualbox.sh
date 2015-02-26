@@ -26,5 +26,8 @@ VBOX_MNT_POINT=/mnt/vbox-shared
 FSTAB=/etc/fstab
 cp -n ${FSTAB} ${FSTAB}.bck
 mkdir ${VBOX_MNT_POINT}
-echo "shared ${VBOX_MNT_POINT} vboxsf defaults" >> ${FSTAB}
-# options: (rw,nodev,relatime)
+echo "shared ${VBOX_MNT_POINT} vboxsf defaults 0 0" >> ${FSTAB}
+mount -a
+
+### References
+# https://www.virtualbox.org/manual/ch04.html#sf_mount_manual
