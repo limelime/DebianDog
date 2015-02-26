@@ -12,7 +12,7 @@ if [ -f ${FIRST_BOOT_LOCK} ]; then
   exit 1;
 fi
 
-DATE_STRING=`date +"%Y-%m-%d_%0k.%M.%S"`
+DATE_STRING=`date +"%Y-%m-%d_%0k.%M.%S %Z"`
 echo "${SCRIPT_NAME} ran on ${DATE_STRING}" >> ${FIRST_BOOT_LOCK};
 
 ### Install
