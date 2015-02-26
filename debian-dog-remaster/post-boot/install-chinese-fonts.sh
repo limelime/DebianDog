@@ -1,4 +1,4 @@
-INSTALL_DATA_DIR=/root/post-boot/install-data
+INSTALL_DATA_DIR=./install-data
 SCRIPT_NAME="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 
 ### Install Chinese fonts so that it display correctly in Iceweseal/Firefox and in the console.
