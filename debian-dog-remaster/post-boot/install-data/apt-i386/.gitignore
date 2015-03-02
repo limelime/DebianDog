@@ -1,3 +1,5 @@
 /archives/
 /pkgcache.bin
 /srcpkgcache.bin
+/partial/
+/lock
