@@ -19,7 +19,12 @@ NEW_SQUASHFS=/media/sf_shared/01-remaster.squashfs
 yes | cp ${NEW_SQUASHFS} ${SQUASHFS}
 
 ### Add persistence boot entry
-cat boot-entry.txt >> ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+LIVE_CFG=${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+cp -n ${LIVE_CFG} ${LIVE_CFG}.bck
+if[ ! -f ${LIVE_CFG} ${LIVE_CFG}.bck];
+then
+  cat boot-entry.txt >> ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+fi
 
 ### Make ISO
 DATE_STRING=`date +"%Y-%m-%d_%0k.%M.%S"`
