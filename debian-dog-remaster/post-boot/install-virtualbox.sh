@@ -18,7 +18,7 @@ cd ${VBOX_GUEST_ISO_DIR}
 cd ..
 
 # Clean up.
-umount ${VBOX_GUEST_ISO_DIR}
+umount -l ${VBOX_GUEST_ISO_DIR}
 rm -rf ${VBOX_GUEST_ISO_DIR}
 
 # Add mount point
