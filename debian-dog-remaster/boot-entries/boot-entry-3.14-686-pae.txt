@@ -1,3 +1,4 @@
+
 ### All files should be in /live/ and not in subdirectory.
 label DebianDog-3.14-686-Pae live-boot v3 in RAM live persistence
 kernel /live/vmlinuz6

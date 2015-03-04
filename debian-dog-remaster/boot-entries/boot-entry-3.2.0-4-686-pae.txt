@@ -1,3 +1,4 @@
+
 ### All files should be in /live/ and not in subdirectory.
 label 3.2.0-4-686-Pae live-boot v3 in RAM live persistence
 kernel /live/vmlinuz2
