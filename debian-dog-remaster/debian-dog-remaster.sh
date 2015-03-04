@@ -22,7 +22,8 @@ yes | cp ${NEW_SQUASHFS} ${SQUASHFS}
 LIVE_CFG=${EXTRACTED_ISO_DIR}/isolinux/live.cfg
 if [ ! -f ${LIVE_CFG}.bck ]; then
   cp -n ${LIVE_CFG} ${LIVE_CFG}.bck
-  cat boot-entry.txt >> ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+  BOOT_ENTRIES_DIR=./boot-entries
+  cat ${BOOT_ENTRIES_DIR}/boot-entry.txt >> ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
 fi
 
 ### Add kernel
