@@ -18,13 +18,6 @@ SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
 NEW_SQUASHFS=/media/sf_shared/01-remaster.squashfs
 yes | cp ${NEW_SQUASHFS} ${SQUASHFS}
 
-### Add persistence boot entry
-LIVE_CFG=${EXTRACTED_ISO_DIR}/isolinux/live.cfg
-if [ ! -f ${LIVE_CFG}.bck ]; then
-  cp -n ${LIVE_CFG} ${LIVE_CFG}.bck
-  BOOT_ENTRIES_DIR=./boot-entries
-  cat ${BOOT_ENTRIES_DIR}/boot-entry.txt >> ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
-fi
 
 ### Add kernel, only 1 at a time.
 ./add-new-kernel-3.14-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
