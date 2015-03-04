@@ -15,6 +15,13 @@ KERNELS_DIR=kernels
 KERNEL_NAME=Debian-kernel-3.14-686-Pae
 BOOT_ENTRIES_DIR=./boot-entries
 
+### Backup default kernel files
+BCK_KERNEL_DIR=${LIVE_DIR}/backup
+mkdir -p ${BCK_KERNEL_DIR}
+mv ${LIVE_DIR}/*.squashfs ${BCK_KERNEL_DIR}
+mv ${LIVE_DIR}/initrd* ${BCK_KERNEL_DIR}
+mv ${LIVE_DIR}/vmlinuz* ${BCK_KERNEL_DIR}
+
 ### Extract the kernel.
 WORK_DIR=${KERNELS_DIR}/${KERNEL_NAME}
 rm -rf ${WORK_DIR}

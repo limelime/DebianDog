@@ -1,0 +1,8 @@
+### All files should be in /live/ and not in subdirectory.
+label 3.2.0-4-686-Pae live-boot v3 in RAM live persistence
+kernel /live/vmlinuz2
+append initrd=/live/initrd21.img boot=live persistence config noeject quickreboot autologin toram=022-686-pae-kernel.squashfs 
+
+label 3.2.0-4-686-Pae live-boot v3 live (no save)
+kernel /live/vmlinuz2
+append initrd=/live/initrd21.img boot=live config swapon noeject quickreboot autologin

@@ -26,8 +26,9 @@ if [ ! -f ${LIVE_CFG}.bck ]; then
   cat ${BOOT_ENTRIES_DIR}/boot-entry.txt >> ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
 fi
 
-### Add kernel
-./add-new-kernel.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+### Add kernel, only 1 at a time.
+./add-new-kernel-3.14-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+
 
 ### Make ISO
 DATE_STRING=`date +"%Y-%m-%d_%0k.%M.%S"`
