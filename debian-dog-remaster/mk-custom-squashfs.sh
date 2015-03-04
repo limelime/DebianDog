@@ -52,3 +52,4 @@ umount -l ${MOUNT_SQUASH}
 
 ### Debug
 # lsof | grep iso
+# lsof +f -- /file/system/name
