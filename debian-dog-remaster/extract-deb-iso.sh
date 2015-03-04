@@ -34,8 +34,8 @@ cp -R * ${TO_DIR}
 # https://wiki.debian.org/DebianInstaller/Modify/CD#Debian-Installer:_How_to_modify_an_existing_CD_image
 
 # Clean up mount process
-#umount ${TMP_LOOP_DIR}
-#rm -rf ${TMP_LOOP_DIR}
+umount ${TMP_LOOP_DIR}
+rm -rf ${TMP_LOOP_DIR}
 
 # Display info
 echo "***************** Done *****************"
