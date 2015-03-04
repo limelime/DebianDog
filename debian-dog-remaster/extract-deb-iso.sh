@@ -17,7 +17,7 @@ TO_DIR=$2
 # Mount ISO
 TMP_LOOP_DIR=/tmp/tmploopiso
 mkdir ${TMP_LOOP_DIR}
-mount -o loop ${ISO_FILE_PATH} ${TMP_LOOP_DIR}
+mount -o loop,ro ${ISO_FILE_PATH} ${TMP_LOOP_DIR}
 
 # Clear ${TO_DIR} before copying
 if [ -f ${TO_DIR} ]; then

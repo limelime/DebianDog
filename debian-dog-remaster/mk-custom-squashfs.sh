@@ -25,7 +25,7 @@ NEW_SQUASH_DIR=${WORKING_DIR}/new-squash
 ### Extract DebianDog's squashfs
 rm -rf ${MOUNT_DEBIAN_DOG_ISO}
 mkdir -p ${MOUNT_DEBIAN_DOG_ISO}
-mount -o loop ${DEBIAN_DOG_ISO} ${MOUNT_DEBIAN_DOG_ISO}
+mount -o loop,ro ${DEBIAN_DOG_ISO} ${MOUNT_DEBIAN_DOG_ISO}
 
 rm -rf ${MOUNT_SQUASH}
 mkdir -p ${MOUNT_SQUASH}
