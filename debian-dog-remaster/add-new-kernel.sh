@@ -19,10 +19,8 @@ BOOT_ENTRIES_DIR=./boot-entries
 WORK_DIR=${KERNELS_DIR}/${KERNEL_NAME}
 rm -rf ${WORK_DIR}
 mkdir -p ${WORK_DIR}
-tar -xvzf ${KERNELS_DIR}/026-kernel-3.14-Pae.tar.gz -C ${WORK_DIR}
+tar -xvzf ${KERNELS_DIR}/026-kernel-3.14-Pae.tar.gz -C ${LIVE_DIR}
 
-### Copy kernel files
-cp -R ${WORK_DIR}/* ${LIVE_DIR} 
 
 ### Add boot-entry
 SEARCH_TERM="DebianDog-3.14-686-Pae"
