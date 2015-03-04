@@ -11,7 +11,7 @@
 ### Extract ISO.
 EXTRACTED_ISO_DIR=/media/sf_shared/moddebdogdir
 ISO_FILE_PATH=/media/sf_shared/DebianDog-Wheezy-openbox_xfce.iso
-#./extract-deb-iso.sh ${ISO_FILE_PATH} ${EXTRACTED_ISO_DIR}
+./extract-deb-iso.sh ${ISO_FILE_PATH} ${EXTRACTED_ISO_DIR}
 
 # Replace squashfs
 SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
@@ -20,11 +20,13 @@ yes | cp ${NEW_SQUASHFS} ${SQUASHFS}
 
 ### Add persistence boot entry
 LIVE_CFG=${EXTRACTED_ISO_DIR}/isolinux/live.cfg
-cp -n ${LIVE_CFG} ${LIVE_CFG}.bck
-if[ ! -f ${LIVE_CFG} ${LIVE_CFG}.bck];
-then
+if [ ! -f ${LIVE_CFG}.bck ]; then
+  cp -n ${LIVE_CFG} ${LIVE_CFG}.bck
   cat boot-entry.txt >> ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
 fi
+
+### Add kernel
+./add-new-kernel.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
 
 ### Make ISO
 DATE_STRING=`date +"%Y-%m-%d_%0k.%M.%S"`
