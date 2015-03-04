@@ -2,9 +2,11 @@
 # Description: 
 # Author: Xuan Ngo
 # Usage:
- #    ./build-new-kernel.sh <../live/> <../isolinux/live.cfg> 
+#       ./build-new-kernel.sh <../live/> <../isolinux/live.cfg> 
 # Requirements:
- #  - 
+#  - 
+# Note: 
+#       -http://murga-linux.com/puppy/viewtopic.php?p=774459#774459
 
 LIVE_DIR=$1
 LIVE_CFG=$2
