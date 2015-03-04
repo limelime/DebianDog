@@ -34,7 +34,7 @@ SEARCH_TERM="DebianDog-3.14-686-Pae"
 if ! grep -q "${SEARCH_TERM}" ${LIVE_CFG} 
 then
   echo "">>${LIVE_CFG}
-  cat ${BOOT_ENTRIES_DIR}/boot-entry-3.14-686-pae.txt >> ${LIVE_CFG}
+  cat ${BOOT_ENTRIES_DIR}/boot-entry-3.14-686-pae.txt > ${LIVE_CFG}
 fi
 
 ### Clean up
