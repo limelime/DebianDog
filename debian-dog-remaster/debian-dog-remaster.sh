@@ -13,15 +13,8 @@ EXTRACTED_ISO_DIR=/media/sf_shared/moddebdogdir
 ISO_FILE_PATH=/media/sf_shared/DebianDog-Wheezy-openbox_xfce.iso
 ./extract-deb-iso.sh ${ISO_FILE_PATH} ${EXTRACTED_ISO_DIR}
 
-# Replace squashfs
-SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
-NEW_SQUASHFS=/media/sf_shared/01-remaster.squashfs
-yes | cp ${NEW_SQUASHFS} ${SQUASHFS}
-
-
 ### Add kernel, only 1 at a time.
 ./add-new-kernel-3.14-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
-
 
 ### Make ISO
 DATE_STRING=`date +"%Y-%m-%d_%0k.%M.%S"`
