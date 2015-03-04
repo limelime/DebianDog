@@ -23,6 +23,6 @@ BOOT_NAME=DebianDog-3.2.0-4-686-Pae
 if ! grep -q "${BOOT_NAME}" ${LIVE_CFG} 
 then
   echo "">>${LIVE_CFG}
-  cat ${BOOT_ENTRIES_DIR}/boot-entry-3.2.0-4-686-pae.txt > ${LIVE_CFG}
+  cat ${BOOT_ENTRIES_DIR}/boot-entry-3.2.0-4-686-pae.txt >> ${LIVE_CFG}
 fi
 
