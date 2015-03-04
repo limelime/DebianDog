@@ -29,3 +29,5 @@ then
   cat boot-entry-3.14-686-pae.txt >> ${LIVE_CFG}
 fi
 
+### Clean up
+# rm -rf ${WORK_DIR}
