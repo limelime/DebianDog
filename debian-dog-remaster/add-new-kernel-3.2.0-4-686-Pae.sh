@@ -15,7 +15,7 @@ KERNELS_DIR=kernels
 BOOT_ENTRIES_DIR=./boot-entries
 
 ### Extract the kernel.
-unzip ${KERNELS_DIR}/022-kernel-686-pae.zip -d ${LIVE_DIR}
+unzip ${KERNELS_DIR}/022-kernel-686-pae.zip -d ${LIVE_DIR} > ${LIVE_DIR}/${KERNEL_NAME}.lst
 
 
 ### Add boot-entry
