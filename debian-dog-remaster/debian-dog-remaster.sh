@@ -24,7 +24,7 @@ then
 	then
 		FILESYSTEM_SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
 		rm -f ${FILESYSTEM_SQUASHFS}
-	  mv ${FILESYSTEM_SQUASHFS_NEW} ${FILESYSTEM_SQUASHFS}
+	  cp ${FILESYSTEM_SQUASHFS_NEW} ${FILESYSTEM_SQUASHFS}
   else
     echo "ERROR: ${FILESYSTEM_SQUASHFS_NEW} is not a file. Please provide a valid '01-filesystem.squashfs' file."
     exit 1;
