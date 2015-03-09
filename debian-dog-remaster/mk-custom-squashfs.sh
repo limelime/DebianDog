@@ -12,7 +12,7 @@ OUTPUT_SQUASH_FILE=$2
 if [ $# -eq 0 ]; then
   echo "ERROR: <DebianDog Original ISO> <Output Squash File> arguments are missing!"
   echo "Example:"
-  echo "\t ./mk-custom-squashfs.sh /path-to/DebianDog-Wheezy-openbox_xfce.iso /path-where-to-create-squash-file"
+  echo "  ./mk-custom-squashfs.sh /path-to/DebianDog-Wheezy-openbox_xfce.iso /path-where-to-create-squash-file"
   exit 1;
 fi
 
