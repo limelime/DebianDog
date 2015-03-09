@@ -21,6 +21,8 @@ ISO_FILE_PATH=/media/sf_shared/DebianDog-Wheezy-openbox_xfce.iso
 FILESYSTEM_SQUASHFS_NEW=$1
 if [ ! -z ${FILESYSTEM_SQUASHFS_NEW} ]; 
 then
+  # Not empty
+
 	if [ -f ${FILESYSTEM_SQUASHFS_NEW} ];
 	then
 		FILESYSTEM_SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
@@ -30,6 +32,10 @@ then
     echo "ERROR: ${FILESYSTEM_SQUASHFS_NEW} is not a file. Please provide a valid '01-filesystem.squashfs' file."
     exit 1;
 	fi
+	
+else
+  # Is empty
+  echo "WARNING: Using default '01-filesystem.squashfs' file from ${ISO_FILE_PATH}."
 fi
 
 ### Make ISO
