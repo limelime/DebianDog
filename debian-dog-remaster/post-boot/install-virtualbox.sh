@@ -23,12 +23,12 @@ rm -rf ${VBOX_GUEST_ISO_DIR}
 
 # Add mount point
 # Be careful of the VBOX_MNT_POINT path because /mnt & /media are exclude from RemasterDog script.
-VBOX_MNT_POINT=/vbox/shared
-FSTAB=/etc/fstab
-cp -n ${FSTAB} ${FSTAB}.bck
-mkdir -p ${VBOX_MNT_POINT}
-echo "shared ${VBOX_MNT_POINT} vboxsf defaults 0 0" >> ${FSTAB}
-mount -a
+#VBOX_MNT_POINT=/vbox/shared
+#FSTAB=/etc/fstab
+#cp -n ${FSTAB} ${FSTAB}.bck
+#mkdir -p ${VBOX_MNT_POINT}
+#echo "shared ${VBOX_MNT_POINT} vboxsf defaults 0 0" >> ${FSTAB}
+#mount -a
 
 ### References
 # https://www.virtualbox.org/manual/ch04.html#sf_mount_manual
