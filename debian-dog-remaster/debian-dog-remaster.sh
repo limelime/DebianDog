@@ -35,7 +35,8 @@ then
 	
 else
   # Is empty
-  echo "WARNING: Using default '01-filesystem.squashfs' file from ${ISO_FILE_PATH}."
+  echo "ERROR: Please provide '01-filesystem.squashfs' file."
+  exit 1;
 fi
 
 ### Make ISO
