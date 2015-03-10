@@ -10,6 +10,8 @@
 
 ### Check input arguments
 FILESYSTEM_SQUASHFS_NEW=$1
+KERNEL=$2
+
 if [ ! -z ${FILESYSTEM_SQUASHFS_NEW} ]; 
 then
   # Not empty
@@ -26,15 +28,37 @@ else
   exit 1;
 fi
 
+if [ -z ${KERNEL} ]; 
+then
+  # Is empty
+  echo "ERROR: Please provide kernel version(e.g. 386, 686)."
+  exit 1;
+fi
+
+if [ ${KERNEL} = "686" ] || [ ${KERNEL} = "386" ];
+then
+  echo ""
+else
+  echo "ERROR: Invalid kernel version. Kernel version available: 386, 686."
+  exit 1;
+fi
+
+
 ### Extract ISO.
 EXTRACTED_ISO_DIR=/media/sf_shared/moddebdogdir
 ISO_FILE_PATH=/media/sf_shared/DebianDog-Wheezy-openbox_xfce.iso
 ./extract-deb-iso.sh ${ISO_FILE_PATH} ${EXTRACTED_ISO_DIR}
 
 ### Add kernel, only 1 at a time.
-#./add-new-kernel-3.14-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
-./add-new-kernel-3.2.0-4-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+if [ ${KERNEL} = "686" ];
+then
+  echo "Adding ${KERNEL}."
+  #./add-new-kernel-3.14-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+  ./add-new-kernel-3.2.0-4-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+fi
 
+
+  
 ### Add new 01-filesystem.squashfs
 FILESYSTEM_SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
 rm -f ${FILESYSTEM_SQUASHFS}
