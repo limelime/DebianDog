@@ -50,14 +50,19 @@ ISO_FILE_PATH=/media/sf_shared/DebianDog-Wheezy-openbox_xfce.iso
 ./extract-deb-iso.sh ${ISO_FILE_PATH} ${EXTRACTED_ISO_DIR}
 
 ### Add kernel, only 1 at a time.
+INSTALL_00_00_SCRIPT=./post-boot/install-00-00.sh
 if [ ${KERNEL} = "686" ];
 then
   echo "Adding ${KERNEL}."
   #./add-new-kernel-3.14-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
   ./add-new-kernel-3.2.0-4-686-Pae.sh ${EXTRACTED_ISO_DIR}/live ${EXTRACTED_ISO_DIR}/isolinux/live.cfg
+  sed -i 's/^.*sh install-00-kernel.*\.sh/sh install-00-kernel-686.sh/' ${INSTALL_00_00_SCRIPT}
+else
+  # 386
+  sed -i 's/^.*sh install-00-kernel.*\.sh/#sh install-00-kernel.sh/' ${INSTALL_00_00_SCRIPT}
 fi
 
-
+exit 1;
   
 ### Add new 01-filesystem.squashfs
 FILESYSTEM_SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
