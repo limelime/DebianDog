@@ -62,7 +62,6 @@ else
   sed -i 's/^.*sh install-00-kernel.*\.sh/#sh install-00-kernel.sh/' ${INSTALL_00_00_SCRIPT}
 fi
 
-exit 1;
   
 ### Add new 01-filesystem.squashfs
 FILESYSTEM_SQUASHFS=${EXTRACTED_ISO_DIR}/live/01-filesystem.squashfs
