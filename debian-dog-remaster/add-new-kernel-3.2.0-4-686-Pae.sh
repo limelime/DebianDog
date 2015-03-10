@@ -12,6 +12,7 @@ LIVE_DIR=$1
 LIVE_CFG=$2
 
 KERNELS_DIR=kernels
+KERNEL_NAME=Debian-kernel-3.2.0-4-686-Pae
 BOOT_ENTRIES_DIR=./boot-entries
 
 ### Extract the kernel.
